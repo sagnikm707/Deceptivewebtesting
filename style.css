@@ -5,43 +5,49 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #eeeeee;
 }
 
 .container {
     min-height: 100vh;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .card {
     width: 420px;
+
     padding: 35px;
 
     background: white;
 
     border-radius: 12px;
 
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-
     text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
-.card h1 {
+h1 {
     margin-bottom: 20px;
 }
 
-.card p {
+p {
     color: #555;
     line-height: 1.6;
+}
+
+.safe {
+    color: green;
 }
 
 .button {
     display: inline-block;
 
     margin-top: 20px;
+
     padding: 14px 25px;
 
     background: #1976d2;
@@ -49,34 +55,31 @@ body {
 
     text-decoration: none;
 
-    border: none;
     border-radius: 6px;
 
     font-size: 16px;
-    cursor: pointer;
 }
 
 .button:hover {
     background: #125ca1;
 }
 
-.safe-text {
-    color: #16833a;
-}
-
-.small-text {
+.small {
     margin-top: 25px;
     font-size: 13px;
 }
 
-/*
-    INTENTIONALLY HIDDEN TEST CONTENT
+.test-notice {
+    margin-top: 30px;
+    font-size: 12px;
+}
 
-    Your Bodyguard should detect this even though
-    a normal user cannot see it.
+/*
+    INTENTIONALLY HIDDEN CONTENT
+    FOR AI BODYGUARD TESTING
 */
 
-.hidden-deception {
+.hidden-content {
     position: absolute;
 
     left: -10000px;
