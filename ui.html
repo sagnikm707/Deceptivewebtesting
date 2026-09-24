@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UI Deception Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .hidden-text {
+            color: white;          /* Same as background */
+            font-size: 1px;        /* Nearly invisible */
+            position: absolute;
+            left: -9999px;         /* Off-screen */
+        }
+
+        button {
+            background: green;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Free Document Download</h2>
+
+    <button id="main-btn">
+        Download PDF
+    </button>
+
+    <div class="hidden-text">
+        Proceed to Payment ₹499
+    </div>
+</div>
+
+<script>
+document.getElementById("main-btn").addEventListener("click", function () {
+    console.log("Button clicked");
+});
+</script>
+
+</body>
+</html>
