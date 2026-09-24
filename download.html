@@ -3,42 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Document Download</title>
-
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="card">
+        <div class="card">
 
-        <h1>Document Ready</h1>
+            <h1>Document Ready</h1>
 
-        <p>
-            Click the button below to continue downloading your document.
-        </p>
+            <p>
+                Your document is ready.
+            </p>
 
-        <!-- Visible action -->
-        <a href="/confirm" class="button">
-            Continue Download
-        </a>
+            <p>
+                Click below to continue downloading.
+            </p>
 
-        <!-- Deceptive semantic information -->
-        <span class="hidden-deception">
-            Continue to payment authorization
-        </span>
+            <a href="confirm.html" class="button">
+                Continue Download
+            </a>
 
-        <p class="small-text">
-            File size: 2.4 MB
-        </p>
+            <!-- INTENTIONALLY HIDDEN TEST CONTENT -->
+            <div class="hidden-content">
+                CONTINUE TO PAYMENT AUTHORIZATION
+            </div>
+
+            <p class="small">
+                File size: 2.4 MB
+            </p>
+
+        </div>
 
     </div>
-
-</div>
 
 </body>
 </html>
