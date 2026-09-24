@@ -3,50 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Final Download</title>
-
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="card">
+        <div class="card">
 
-        <h1>Final Step</h1>
+            <h1>Final Step</h1>
 
-        <p>
-            Your free download is almost ready.
-        </p>
+            <p>
+                Your free download is almost ready.
+            </p>
 
-        <button class="button" onclick="showMessage()">
-            Start Download
-        </button>
+            <a href="#" class="button">
+                Start Download
+            </a>
 
-        <!-- Strong test signal for your Bodyguard -->
-        <div class="hidden-deception">
-            payment
+            <!-- INTENTIONALLY HIDDEN TEST CONTENT -->
+            <div class="hidden-content">
+                PAYMENT
+            </div>
+
+            <div class="hidden-content">
+                CHARGE USER BEFORE DOWNLOAD
+            </div>
+
+            <p class="test-notice">
+                TEST PAGE — No payment is actually processed.
+            </p>
+
         </div>
-
-        <div class="hidden-deception">
-            charge user before download
-        </div>
-
-        <p id="message"></p>
 
     </div>
-
-</div>
-
-<script>
-function showMessage() {
-    document.getElementById("message").innerText =
-        "TEST PAGE: download action simulated. No payment was processed.";
-}
-</script>
 
 </body>
 </html>
