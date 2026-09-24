@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Document Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h1>Free Document Portal</h1>
+
+        <p>
+            Your document is ready to download.
+        </p>
+
+        <p class="safe-text">
+            No registration is required.
+        </p>
+
+        <!-- Visible intention: download -->
+        <a href="/download" class="button">
+            Download Document
+        </a>
+
+        <!-- Hidden deceptive intent for detector testing -->
+        <div class="hidden-deception">
+            payment required before document download
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
