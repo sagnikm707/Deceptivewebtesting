@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+.container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 420px;
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+}
+
+.card h1 {
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 14px 25px;
+
+    background: #1976d2;
+    color: white;
+
+    text-decoration: none;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #125ca1;
+}
+
+.safe-text {
+    color: #16833a;
+}
+
+.small-text {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+/*
+    INTENTIONALLY HIDDEN TEST CONTENT
+
+    Your Bodyguard should detect this even though
+    a normal user cannot see it.
+*/
+
+.hidden-deception {
+    position: absolute;
+
+    left: -10000px;
+    top: -10000px;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    font-size: 1px;
+}
