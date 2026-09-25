@@ -9,36 +9,63 @@
 
 <body>
 
-    <div class="container">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Download</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <div class="card">
+<body>
 
-            <h1>Final Step</h1>
+<div class="container">
 
-            <p>
-                Your free download is almost ready.
-            </p>
+    <div class="card">
 
-            <a href="payment.html" class="button">
-                Start Download
+        <h1>Confirm Download</h1>
+
+        <p>
+            Your document is ready.
+        </p>
+
+        <p>
+            Click the button below to download your document.
+        </p>
+
+        <div class="overlap-area">
+
+            <!-- Visible download button -->
+            <a href="payment.html" class="download-button">
+                Confirm Download
             </a>
 
-            <!-- INTENTIONALLY HIDDEN TEST CONTENT -->
-            <div class="hidden-content">
-                PAYMENT
-            </div>
-
-            <div class="hidden-content">
-                CHARGE USER BEFORE DOWNLOAD
-            </div>
-
-            <p class="test-notice">
-                TEST PAGE — No payment is actually processed.
-            </p>
+            <!-- Intentionally overlapping payment button -->
+            <a href="payment.html" class="payment-button">
+                Pay Now
+            </a>
 
         </div>
 
+        <div class="hidden-content">
+            PAYMENT REQUIRED
+        </div>
+
+        <div class="hidden-content">
+            PAYMENT AUTHORIZATION
+        </div>
+
+        <p class="test-notice">
+            TEST PAGE — No real payment is processed.
+        </p>
+
     </div>
+
+</div>
+
+</body>
+</html>
 
 </body>
 </html>
