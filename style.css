@@ -1,7 +1,3 @@
-/* =========================================
-   GLOBAL
-   ========================================= */
-
 * {
     box-sizing: border-box;
 }
@@ -9,19 +5,12 @@
 body {
     margin: 0;
     padding: 0;
-
     font-family: Arial, Helvetica, sans-serif;
-
     background: #eeeeee;
-
     color: #222;
 }
 
-
-/* =========================================
-   MAIN CONTAINER
-   ========================================= */
-
+/* Main page container */
 .container {
     min-height: 100vh;
 
@@ -32,14 +21,9 @@ body {
     padding: 20px;
 }
 
-
-/* =========================================
-   CARD
-   ========================================= */
-
+/* Main card */
 .card {
     width: 420px;
-
     padding: 35px;
 
     background: #ffffff;
@@ -48,8 +32,7 @@ body {
 
     text-align: center;
 
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card h1 {
@@ -61,25 +44,18 @@ body {
 
 .card p {
     color: #555;
-
     line-height: 1.6;
 }
 
-
-/* =========================================
-   NORMAL BUTTON
-   Used by index.html and other pages
-   ========================================= */
-
+/* Normal buttons */
 .button {
     display: inline-block;
 
     margin-top: 20px;
-
     padding: 14px 25px;
 
     background: #1976d2;
-    color: #ffffff;
+    color: white;
 
     text-decoration: none;
 
@@ -87,7 +63,6 @@ body {
     border-radius: 6px;
 
     font-size: 16px;
-
     cursor: pointer;
 }
 
@@ -95,75 +70,48 @@ body {
     background: #125ca1;
 }
 
-
-/* =========================================
-   SAFE INFORMATION
-   ========================================= */
-
 .safe {
     color: #16833a !important;
 }
 
-
-/* =========================================
-   SMALL TEXT
-   ========================================= */
-
 .small {
     margin-top: 25px;
-
     font-size: 13px;
-
     color: #777 !important;
 }
-
-
-/* =========================================
-   TEST NOTICE
-   ========================================= */
 
 .test-notice {
     margin-top: 30px;
-
     font-size: 12px;
-
     color: #777 !important;
 }
 
-
-/* =========================================
-   PAYMENT CONFIRMATION PAGE
-   ========================================= */
-
 .warning {
     color: #d32f2f !important;
-
     font-weight: bold;
-
     font-size: 18px;
 }
 
 
 /* =========================================
-   OVERLAPPING BUTTON AREA
+   OVERLAPPING BUTTON TEST
    ========================================= */
 
 .overlap-area {
     position: relative;
 
     width: 260px;
-    height: 60px;
+    height: 50px;
 
     margin: 30px auto;
 }
 
 
-/* =========================================
-   UNDERLYING PAYMENT BUTTON
-   =========================================
+/*
+   UNDERLYING PAYMENT ACTION
 
-   This button exists in the DOM but is
-   completely covered by the download button.
+   It remains in the DOM for your detector,
+   but is completely transparent visually.
 */
 
 .payment-button {
@@ -177,29 +125,29 @@ body {
 
     padding: 14px 20px;
 
-    background: #d32f2f;
-    color: #ffffff;
+    background: transparent;
+    color: transparent;
+
+    border: none;
 
     text-decoration: none;
-
     text-align: center;
 
     border-radius: 6px;
 
     font-size: 16px;
 
-    /*
-       Lower layer.
-       The visible download button
-       is placed above it.
-    */
+    opacity: 0;
+
     z-index: 1;
 }
 
 
-/* =========================================
-   VISIBLE DOWNLOAD BUTTON
-   ========================================= */
+/*
+   VISIBLE DOWNLOAD ACTION
+
+   This is the only thing the user sees.
+*/
 
 .download-button {
     position: absolute;
@@ -215,22 +163,16 @@ body {
     background: #1976d2;
     color: #ffffff;
 
-    text-decoration: none;
-
-    text-align: center;
-
+    border: none;
     border-radius: 6px;
+
+    text-decoration: none;
+    text-align: center;
 
     font-size: 16px;
 
     cursor: pointer;
 
-    /*
-       Higher layer.
-
-       This completely covers the
-       payment button visually.
-    */
     z-index: 2;
 }
 
@@ -240,12 +182,8 @@ body {
 
 
 /* =========================================
-   INTENTIONALLY HIDDEN DOM CONTENT
-   =========================================
-
-   Used for testing whether Vanguard scans
-   hidden/off-screen content.
-*/
+   HIDDEN PAYMENT TEXT
+   ========================================= */
 
 .hidden-content {
     position: absolute;
@@ -265,14 +203,13 @@ body {
 
 
 /* =========================================
-   RESPONSIVE DESIGN
+   RESPONSIVE
    ========================================= */
 
 @media (max-width: 500px) {
 
     .card {
         width: 100%;
-
         padding: 25px;
     }
 
