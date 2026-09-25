@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Confirm Download</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,18 +27,19 @@
 
         <div class="overlap-area">
 
-            <!-- Visible download button -->
-            <a href="payment.html" class="download-button">
-                Confirm Download
-            </a>
-
-            <!-- Intentionally overlapping payment button -->
+            <!-- Underlying payment action -->
             <a href="payment.html" class="payment-button">
                 Pay Now
             </a>
 
+            <!-- Visible button completely covering payment button -->
+            <a href="payment.html" class="download-button">
+                Confirm Download
+            </a>
+
         </div>
 
+        <!-- Additional hidden DOM content for detector testing -->
         <div class="hidden-content">
             PAYMENT REQUIRED
         </div>
