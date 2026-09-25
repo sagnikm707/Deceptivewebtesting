@@ -1,12 +1,26 @@
+/* =========================================
+   GLOBAL STYLES
+   ========================================= */
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
     background: #eeeeee;
+
+    color: #222;
 }
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
 
 .container {
     min-height: 100vh;
@@ -14,34 +28,47 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding: 20px;
 }
+
+
+/* =========================================
+   CARD
+   ========================================= */
 
 .card {
     width: 420px;
 
     padding: 35px;
 
-    background: white;
+    background: #ffffff;
 
     border-radius: 12px;
 
     text-align: center;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
-h1 {
+.card h1 {
+    margin-top: 0;
     margin-bottom: 20px;
+
+    font-size: 28px;
 }
 
-p {
+.card p {
     color: #555;
+
     line-height: 1.6;
 }
 
-.safe {
-    color: green;
-}
+
+/* =========================================
+   NORMAL BUTTON
+   ========================================= */
 
 .button {
     display: inline-block;
@@ -51,32 +78,161 @@ p {
     padding: 14px 25px;
 
     background: #1976d2;
-    color: white;
+    color: #ffffff;
 
     text-decoration: none;
 
+    border: none;
     border-radius: 6px;
 
     font-size: 16px;
+
+    cursor: pointer;
 }
 
 .button:hover {
     background: #125ca1;
 }
 
+
+/* =========================================
+   SAFE / INFORMATION TEXT
+   ========================================= */
+
+.safe {
+    color: #16833a !important;
+}
+
 .small {
     margin-top: 25px;
+
     font-size: 13px;
+
+    color: #777 !important;
 }
 
 .test-notice {
     margin-top: 30px;
+
     font-size: 12px;
+
+    color: #777 !important;
 }
 
+
+/* =========================================
+   PAYMENT CONFIRMATION PAGE
+   ========================================= */
+
+.warning {
+    color: #d32f2f !important;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   OVERLAPPING BUTTON TEST
+   ========================================= */
+
+.overlap-area {
+    position: relative;
+
+    width: 260px;
+    height: 90px;
+
+    margin: 30px auto;
+}
+
+
+/* -----------------------------------------
+   DOWNLOAD BUTTON
+   ----------------------------------------- */
+
+.download-button {
+    position: absolute;
+
+    left: 0;
+    top: 15px;
+
+    width: 260px;
+
+    padding: 14px 20px;
+
+    background: #1976d2;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    z-index: 1;
+}
+
+.download-button:hover {
+    background: #125ca1;
+}
+
+
+/* -----------------------------------------
+   PAYMENT BUTTON
+   ----------------------------------------- */
+
+.payment-button {
+    position: absolute;
+
+    left: 35px;
+    top: 25px;
+
+    width: 190px;
+
+    padding: 14px 20px;
+
+    background: #d32f2f;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    /*
+       Intentionally placed above the
+       download button for deception testing.
+    */
+    z-index: 2;
+
+    opacity: 0.92;
+}
+
+.payment-button:hover {
+    background: #b71c1c;
+}
+
+
+/* =========================================
+   HIDDEN CONTENT
+   ========================================= */
+
 /*
-    INTENTIONALLY HIDDEN CONTENT
-    FOR AI BODYGUARD TESTING
+   These elements intentionally contain
+   payment-related text while remaining
+   invisible to the normal user.
+
+   They are useful for testing whether
+   the Bodyguard scanner examines the DOM
+   rather than only visible text.
 */
 
 .hidden-content {
@@ -93,4 +249,28 @@ p {
     opacity: 0;
 
     font-size: 1px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .card {
+        width: 100%;
+
+        padding: 25px;
+    }
+
+    .card h1 {
+        font-size: 24px;
+    }
+
+    .overlap-area {
+        transform: scale(0.9);
+
+        transform-origin: center;
+    }
 }
