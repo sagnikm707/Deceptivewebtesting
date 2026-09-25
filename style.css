@@ -1,5 +1,5 @@
 /* =========================================
-   GLOBAL STYLES
+   GLOBAL
    ========================================= */
 
 * {
@@ -68,6 +68,7 @@ body {
 
 /* =========================================
    NORMAL BUTTON
+   Used by index.html and other pages
    ========================================= */
 
 .button {
@@ -96,12 +97,17 @@ body {
 
 
 /* =========================================
-   SAFE / INFORMATION TEXT
+   SAFE INFORMATION
    ========================================= */
 
 .safe {
     color: #16833a !important;
 }
+
+
+/* =========================================
+   SMALL TEXT
+   ========================================= */
 
 .small {
     margin-top: 25px;
@@ -110,6 +116,11 @@ body {
 
     color: #777 !important;
 }
+
+
+/* =========================================
+   TEST NOTICE
+   ========================================= */
 
 .test-notice {
     margin-top: 30px;
@@ -134,63 +145,35 @@ body {
 
 
 /* =========================================
-   OVERLAPPING BUTTON TEST
+   OVERLAPPING BUTTON AREA
    ========================================= */
 
 .overlap-area {
     position: relative;
 
     width: 260px;
-    height: 90px;
+    height: 60px;
 
     margin: 30px auto;
 }
 
 
-/* -----------------------------------------
-   DOWNLOAD BUTTON
-   ----------------------------------------- */
+/* =========================================
+   UNDERLYING PAYMENT BUTTON
+   =========================================
 
-.download-button {
-    position: absolute;
-
-    left: 0;
-    top: 15px;
-
-    width: 260px;
-
-    padding: 14px 20px;
-
-    background: #1976d2;
-    color: #ffffff;
-
-    text-decoration: none;
-
-    text-align: center;
-
-    border-radius: 6px;
-
-    font-size: 16px;
-
-    z-index: 1;
-}
-
-.download-button:hover {
-    background: #125ca1;
-}
-
-
-/* -----------------------------------------
-   PAYMENT BUTTON
-   ----------------------------------------- */
+   This button exists in the DOM but is
+   completely covered by the download button.
+*/
 
 .payment-button {
     position: absolute;
 
-    left: 35px;
-    top: 25px;
+    left: 0;
+    top: 0;
 
-    width: 190px;
+    width: 260px;
+    height: 48px;
 
     padding: 14px 20px;
 
@@ -205,34 +188,63 @@ body {
 
     font-size: 16px;
 
-    cursor: pointer;
-
     /*
-       Intentionally placed above the
-       download button for deception testing.
+       Lower layer.
+       The visible download button
+       is placed above it.
     */
-    z-index: 2;
-
-    opacity: 0.92;
-}
-
-.payment-button:hover {
-    background: #b71c1c;
+    z-index: 1;
 }
 
 
 /* =========================================
-   HIDDEN CONTENT
+   VISIBLE DOWNLOAD BUTTON
    ========================================= */
 
-/*
-   These elements intentionally contain
-   payment-related text while remaining
-   invisible to the normal user.
+.download-button {
+    position: absolute;
 
-   They are useful for testing whether
-   the Bodyguard scanner examines the DOM
-   rather than only visible text.
+    left: 0;
+    top: 0;
+
+    width: 260px;
+    height: 48px;
+
+    padding: 14px 20px;
+
+    background: #1976d2;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    /*
+       Higher layer.
+
+       This completely covers the
+       payment button visually.
+    */
+    z-index: 2;
+}
+
+.download-button:hover {
+    background: #125ca1;
+}
+
+
+/* =========================================
+   INTENTIONALLY HIDDEN DOM CONTENT
+   =========================================
+
+   Used for testing whether Vanguard scans
+   hidden/off-screen content.
 */
 
 .hidden-content {
@@ -269,8 +281,11 @@ body {
     }
 
     .overlap-area {
-        transform: scale(0.9);
+        width: 240px;
+    }
 
-        transform-origin: center;
+    .payment-button,
+    .download-button {
+        width: 240px;
     }
 }
